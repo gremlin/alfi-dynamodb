@@ -38,7 +38,7 @@
 4. Test this application endpoint again.
     `curl http://localhost:8080/{id}`
     
-You should a stack trace similar to the following
+You should see a stack trace similar to the following
 
 ```text
 2020-05-29 11:38:17.972  INFO 55726 --- [nio-8080-exec-4] c.e.a.persistence.GetItemRequester       : Querying DynamoDB for item with ID 2ZYFJ3GM2N...
