@@ -16,9 +16,32 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<alfi.version>0.7.3</alfi.version>
+		<aws.version>1.11.791</aws.version>
 	</properties>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.amazonaws</groupId>
+				<artifactId>aws-java-sdk-bom</artifactId>
+				<version>${aws.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
+		<dependency>
+			<groupId>com.gremlin</groupId>
+			<artifactId>alfi-aws-dynamodb-client</artifactId>
+			<version>0.7.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-dynamodb</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -45,5 +68,11 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>gremlin</id>
+			<url>https://maven.gremlin.com/</url>
+		</repository>
+	</repositories>
 
 </project>
